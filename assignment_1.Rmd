@@ -1,0 +1,14 @@
+
+```{r hwplots}
+gapminder.url <- "https://raw.githubusercontent.com/socviz/soc880/master/data/gapminder.csv"
+
+
+gm <- read.csv(url(gapminder.url), na.strings="")
+
+
+ggplot(gm) + geom_point(aes(x = lifeExp, y = gdpPercap))
+
+ggplot(gm) + geom_point(aes(x = pop, y = gdpPercap))
+
+ggplot(gm) + geom_point(aes(x = year, y = pop))
+```
